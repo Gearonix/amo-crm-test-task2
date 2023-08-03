@@ -1,0 +1,122 @@
+@use '../../styles/mixins.scss' as *;
+
+.footer {
+  @include flex(space-between);
+  width: 100%;
+  padding-top: 55px;
+  z-index: 3;
+  position: relative;
+}
+
+
+.menu {
+  margin-left: 98px;
+  .menu_block{
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.contacts {
+  text-align: right;
+  .icons {
+    @include flex(flex-end);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .icon {
+    @include wh(20px, 20px);
+  }
+}
+
+.footer_title {
+  color: var(--secondary);
+  font-size: var(--fz-6);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+.footer_link {
+  white-space: nowrap;
+  font-size: var(--fz-5);
+  margin-bottom: 10px;
+  display: block;
+  opacity: 0.8;
+}
+
+.footer_left_section{
+  display: flex;
+}
+
+.bottom_footer {
+  @include flex(flex-end);
+  width: 100%;
+  margin-top: 33px;
+}
+
+.all_rights_reserved {
+  max-width: 239px;
+  height: 54px;
+  text-align: right;
+  cursor: pointer;
+  h5 {
+    font-size: var(--fz-7);
+    margin-bottom: 6px;
+    opacity: 0.8;
+    white-space: nowrap;
+    &:last-child {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1057px) {
+  .menu {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 853px) {
+  .footer, .footer_left_section, .contacts, .bottom_footer {
+    display: block;
+    margin-top: 15px;
+  }
+  .footer {
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .menu{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .contacts, .all_rights_reserved {
+   text-align: left;
+   margin-top: 20px;
+    .icons {
+      justify-content: flex-start;
+    }
+  }
+
+}
+
+@media (max-width: 574px) {
+  .footer, .all_rights_reserved {
+    padding-left: 9px;
+    background: var(--dark);
+  }
+}
+
+
+@media (max-width: 420px) {
+  .menu .menu_block {
+    gap: 15px;
+  }
+  .footer_link {
+    white-space: initial;
+  }
+}
+

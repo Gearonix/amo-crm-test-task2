@@ -1,0 +1,7 @@
+export { default as purpleBall } from './balls/purple_ball.png'
+export { default as redBall } from './balls/red_ball.png'
+export { default as redBallSmall } from './balls/red_ball_small.png'
+export { default as telegram } from './icons/telegram.svg'
+export { default as viber } from './icons/viber.svg'
+export { default as whatsapp } from './icons/whatsapp.svg'
+export { default as logo } from './logo.png'

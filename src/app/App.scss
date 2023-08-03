@@ -1,0 +1,66 @@
+@use '../styles/mixins' as *;
+
+:root {
+  --light: #e4e5ea;
+  --secondary: #656566;
+  --dark: #0e1014;
+  --fz-1: 48px;
+  --fz-4: 18px;
+  --fz-5: 16px;
+  --fz-6: 14px;
+  --fz-7: 12px;
+}
+
+body {
+  background: var(--dark);
+  font-family: 'Inter', sans-serif;
+  color: var(--light);
+  font-size: var(--fz-5);
+  overflow-x: hidden;
+  @include customScroll;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 46px;
+}
+
+h1,h2,h3,h4,h5,h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+
+@media (max-width: 1335px) {
+  .container {
+    width: 90%;
+  }
+}
+
+
+
+@media (max-width: 967px) {
+  :root {
+    --fz-1: 40px;
+    --fz-4: 18px;
+    --fz-5: 14px;
+    --fz-6: 12px;
+    --fz-7: 10px;
+  }
+}
+
+
+@media (max-width: 665px) {
+  :root {
+    --fz-1: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+

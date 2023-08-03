@@ -1,0 +1,124 @@
+@use '../../styles/mixins.scss' as *;
+
+.header {
+  @include wh(100%, 73px);
+  @include flex(space-between);
+  padding-top: 11px;
+}
+
+.header_left_section {
+  display: flex;
+}
+
+.logo {
+  @include wh(140px, 24px);
+}
+
+.logo_description {
+  color: var(--light);
+  opacity: 0.6;
+  font-size: 10px;
+  line-height: 12.19px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  max-width: 165px;
+}
+
+.nav {
+  height: 19px;
+  display: flex;
+  gap: 30px;
+  margin-left: 52px;
+  margin-top: 4px;
+}
+
+.nav_link {
+  color: var(--light);
+  font-size: var(--fz-5);
+  cursor: pointer;
+}
+
+.nav_right_section {
+  margin-top: 4px;
+  max-width: 309px;
+  width: 30%;
+  display: flex;
+  .icons{
+    width: 120px;
+    display: flex;
+    gap: 30px;
+    margin-left: 47px;
+  }
+  .icon {
+    @include wh(20px, 20px);
+    margin-top: -3px;
+  }
+}
+
+
+
+
+@media (max-width: 1121px) {
+  .nav_right_section{
+    justify-content: flex-end;
+    .phone {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 961px) {
+  .nav {
+    margin-left: 20px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 813px) {
+  .nav_right_section .icons {
+    margin-left: 10px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav_right_section {
+    display: none;
+  }
+  .header_left_section {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+
+
+@media (max-width: 575px) {
+  .header {
+    height: 75px;
+    padding: 0 5px;
+    align-items: center;
+    overflow-y: auto;
+    background: var(--dark);
+    position: relative;
+    z-index: 3;
+  }
+  .logo_wrapper {
+    display: none;
+  }
+  .nav_link {
+    font-size: var(--fz-5);
+    text-transform: uppercase;
+  }
+  .nav {
+    gap: 15px;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 574px) {
+  .header {
+    padding-left: 9px;
+  }
+}
